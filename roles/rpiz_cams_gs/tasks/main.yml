@@ -1,0 +1,42 @@
+- name: Download Raspbian OS Lite
+  delegate_to: 127.0.0.1
+  get_url:
+    url: https://downloads.raspberrypi.org/raspios_lite_armhf/images/raspios_lite_armhf-2021-05-28/2021-05-07-raspios-buster-armhf-lite.zip
+    dest: /home/alex/rpiz_cams_os.zip
+    mode: 0755
+  tags: gs_test1
+
+- name: Unzip it 
+  delegate_to: 127.0.0.1
+  become: yes
+  ansible.builtin.unarchive:
+    src: /home/alex/rpiz_cams_os.zip
+    dest: /home/alex/rpiz_cams_os
+    mode: 0755
+  tags: gs_test1
+
+#- name: Set raspberry pi MAC address
+
+#- name: Find MAC Address
+#  debug:
+#    msg: "interface {{ item }}'s MAC is {{ ansible_facts[item]['macaddress']|default(None) }}"
+    
+    
+
+#- name: Update apt cache and install required GS packages
+#  apt:
+#    update_cache: true
+#    pkg: {{ gs_pkgs }}
+#
+#- name: Get list of rpiz_cams MAC addresses
+#  shell: sudo arp-scan {{ lan_address }} | grep dc:a6:32
+#
+#- name: Get list of rpiz_cams IP addresses
+#  command: ...
+#  register: ....
+
+# Run another task on the raspberry pi's to change all the network settings to what we need them to be
+
+# Run rpiz_cams tasks on all pi's
+
+ 

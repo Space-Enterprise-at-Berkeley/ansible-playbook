@@ -1,0 +1,2 @@
+# Names of packages needed on GS to setup rpi_cam's
+gs_pkgs: [nmap, arp-scan]

@@ -1,0 +1,26 @@
+- name: "Update Apt Cache"
+  apt: 
+     update_cache: yes
+  tags: setup
+
+- name: "Upgrade apt"
+  apt: 
+     upgrade: yes
+
+- name: "Install ustreamer dependencies"
+  apt:
+    name: ['make', 'gcc',
+- name: 'Download ustreamer'
+  git: 
+    repo: https://github.com/pikvm/ustreamer  
+    dest: /home/pi/
+    clone: yes
+    update: yes
+    depth: 1 
+
+- name: 'Build ustreamer'
+  make: 
+    chdir: /home/pi/ustreamer
+    target: install
+  become: yes
+

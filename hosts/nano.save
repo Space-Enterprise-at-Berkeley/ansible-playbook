@@ -1,0 +1,7 @@
+[rpiz_cams]
+localhost ansible_host=10.0.0.51 user=pi
+localhost ansible_host=10.0.0.51 user=pi
+localhost ansible_host=10.0.0.51 user=pi
+localhost ansible_host=10.0.0.51 user=pi
+localhost ansible_host=10.0.0.51 user=pi
+localhost ansible_host=10.0.0.51 user=pi
