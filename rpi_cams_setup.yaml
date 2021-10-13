@@ -1,3 +1,5 @@
 - hosts: rpiz_cams
   roles:
-  - role: rpiz_cams
+  - role: ansible-role-ustreamer
+    sudo: yes
+    become: yes

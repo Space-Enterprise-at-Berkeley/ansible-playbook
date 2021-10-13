@@ -1,5 +1,0 @@
-- hosts: 127.0.0.1
-  tasks:
-    - name: Include rpiz_cams_gs role
-      include_role: 
-        name: rpiz_cams_gs

@@ -1,0 +1,10 @@
+rpiz_cams:
+  hosts:
+    10.42.0.81:
+    10.42.0.229:
+  vars:
+    ansible_user: pi
+    ansible_password: raspberry
+    ansible_become: true
+    ansible_become_user: root
+    ansible_become_password: raspberry
