@@ -1,0 +1,11 @@
+- hosts: rpiz_cams
+  roles:
+  - role: ansible-role-ntp 
+  tasks:
+  - name: Get pi time
+    shell: timedatectl status
+    register: time
+
+  - name: Print pi time
+    debug:
+      msg: "Time: '{{ time }}'"

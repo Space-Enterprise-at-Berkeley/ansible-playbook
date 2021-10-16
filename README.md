@@ -1,5 +1,5 @@
 ### How to use Ansible ###
-If you're not using a Linux based OS good luck lol.
+If you're not using bash/zsh and Linux based OS good luck lol.
 
 `sudo apt update`
 

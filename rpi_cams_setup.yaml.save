@@ -1,3 +1,0 @@
-- hosts: rpiz_cams
-  roles:
-  - role: rpiz_cams

@@ -1,7 +1,35 @@
 rpiz_cams:
-  hosts:
-    10.42.0.81:
-    10.42.0.229:
+  hosts: 
+    10.0.0.50
+  children:
+    rpiz_cams_v1:
+      hosts:  
+        10.0.0.51:
+        10.0.0.52:
+        10.0.0.53:
+        10.0.0.54:
+
+        10.42.0.46:
+        10.42.0.81:
+        10.42.0.189:
+        10.42.0.59:
+    rpiz_cams_v2:
+      hosts: 
+        10.0.0.55:
+        10.0.0.56:
+        
+        10.42.0.91:
+        10.42.0.229:
+      vars:
+        ustreamer_resolution: 1280x720
+    dhcp:
+      hosts:
+        10.42.0.46:
+        
+        10.42.0.59:
+
+        10.42.0.91:
+        10.42.0.229:
   vars:
     ansible_user: pi
     ansible_password: raspberry
